@@ -1,0 +1,60 @@
+data_path: ./datasets/fqmall
+batch_size: 32
+num_workers: 4
+log_iter: 1
+snapshot_save_iter: 1000
+
+max_iter: 100000
+batch_size: 1
+input_dim: 5117
+weight_decay: 0.00001
+beta1: 0.5
+beta2: 0.999
+init: gaussian
+lr: 0.0001
+lr_policy: step
+step_size: 10000
+gamma: 0.5
+gan_w: 1
+recon_x_w: 1
+recon_trait_w: 10
+recon_basis_w: 1
+recon_x_cyc_w: 10
+
+
+basis_encoder_dims:
+  - 1024
+  - 512
+  - 768
+  - 1024
+  - 768
+  - 512
+
+trait_encoder_dims:
+  - 1024
+  - 512
+  - 768
+  - 1024
+  - 768
+  - 512
+
+decoder_dims:
+  - 1024
+  - 512
+  - 768
+  - 1024
+  - 768
+  - 512
+
+dis_dims:
+  - 1024
+  - 512
+  - 768
+  - 1024
+  - 768
+  - 512
+
+out_dim: 1024
+
+gen:
+  trait_dim: 1024
